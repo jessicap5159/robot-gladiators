@@ -1,3 +1,10 @@
+// Game States
+// "WIN" - Player robot has defeated all enemy-robots
+// *Fight all enemy-robots
+// *Defeat each enemy-robot
+// "LOSE" - Player robot's health is 0 or less
+
+
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
@@ -5,7 +12,12 @@ var playerMoney = 10;
 
 // You can also log multiple values at once like this: console.log(playerName, playerAttack, playerHealth);
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto","Amy Android","Robo Trumble"];
+console.log(enemyNames);
+enemyNames[0];
+console.log(enemyNames);
+console.log(enemyNames[3]);
+
 var enemyHealth = 50;
 var enemyAttack = 12;
 
@@ -27,14 +39,14 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     // Log a resulting message to the console so we know that it worked
 
     console.log(
-        playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."
+        playerName + " attacked " +  + ". " +  + " now has " + enemyHealth + " health remaining."
      );
 
      // check enemy's health
      if (enemyHealth <= 0) {
-         window.alert(enemyName + " has died!");
+         window.alert( + " has died!");
         } else {
-        window.alert(enemyName + " still has " + enemyHealth + " health left.");
+        window.alert( + " still has " + enemyHealth + " health left.");
     }
 
     // remove player's health by subtracting the amount set in the enemyAttack variable
@@ -47,7 +59,7 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     // Log a resulting message to the console so we know that it worked
 
     console.log(
-        enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+         + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
     ); 
 
     // check player's health
@@ -85,4 +97,4 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 // run fight functino to start game
   
 
-fight(); 
+// fight(); 
