@@ -80,7 +80,7 @@ for (var i = 0; i < enemyNames.length; i++) {
     var pickedEnemyName = enemyNames[i];
 
     // reset enemyHealth before starting new fight
-    // enemyHealth = 50;
+    enemyHealth = 50;
 
     // use debugger to pause script from running and check what's going on at that moment in the code
     debugger;
