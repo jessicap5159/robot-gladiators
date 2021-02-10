@@ -13,15 +13,10 @@ var playerMoney = 10;
 // You can also log multiple values at once like this: console.log(playerName, playerAttack, playerHealth);
 
 var enemyNames = ["Roborto","Amy Android","Robo Trumble"];
-console.log(enemyNames);
-enemyNames[0];
-console.log(enemyNames);
-console.log(enemyNames[3]);
-
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-var fight = function() { 
+var fight = function(enemyName) { 
     // Alert players that they are starting the round
     window.alert("Welcome to Robot Gladiators!"); 
 
@@ -39,14 +34,14 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     // Log a resulting message to the console so we know that it worked
 
     console.log(
-        playerName + " attacked " +  + ". " +  + " now has " + enemyHealth + " health remaining."
+        playerName + " attacked " + enemyNames[i] + ". " + enemyNames[i] + " now has " + enemyHealth + " health remaining."
      );
 
      // check enemy's health
      if (enemyHealth <= 0) {
          window.alert( + " has died!");
         } else {
-        window.alert( + " still has " + enemyHealth + " health left.");
+        window.alert(enemyNames[i] + " still has " + enemyHealth + " health left.");
     }
 
     // remove player's health by subtracting the amount set in the enemyAttack variable
@@ -59,7 +54,7 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
     // Log a resulting message to the console so we know that it worked
 
     console.log(
-         + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
+       enemyNames[i]  + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining."
     ); 
 
     // check player's health
@@ -94,7 +89,9 @@ if (promptFight === "fight" || promptFight === "FIGHT") {
 }
 };
 
-// run fight functino to start game
+// run fight function to start game
   
 
-// fight(); 
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
